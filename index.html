@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sai Ganesh | Java & Spring Boot Engineer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Minimal, modern CSS -->
+  <style>
+    :root { --accent:#2563eb; --bg:#0b1020; --ink:#e5e7eb; --muted:#9aa3b2; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b1220;color:var(--ink)}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    nav{position:sticky;top:0;background:rgba(11,16,32,.7);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #1f2937;z-index:10}
+    nav .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a:hover{opacity:.85}
+    .btn{display:inline-block;padding:12px 16px;border:1px solid #334155;border-radius:12px}
+    .btn.primary{background:var(--accent);border-color:var(--accent);color:white}
+    section{padding:90px 0;border-bottom:1px solid #1f2937}
+    h1{font-size:52px;line-height:1.05;margin:14px 0 8px}
+    h2{font-size:28px;margin:0 0 18px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:18px}
+    .skills{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .card{padding:16px;border:1px solid #243042;border-radius:14px;background:#0f172a}
+    .xp{display:grid;gap:12px}
+    .xp-item{border-left:3px solid var(--accent);padding-left:12px}
+    footer{padding:28px 0}
+  </style>
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <div class="inner container">
+      <strong>SG</strong>
+      <ul>
+        <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li><li><a href="#certs">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home">
+    <div class="container" style="padding:100px 0 40px">
+      <span class="muted">Senior Java Developer</span>
+      <h1>Sai Ganesh Tirumalasetty</h1>
+      <p class="muted" style="max-width:720px">
+        I build secure, high-volume systems with <strong>Java, Spring Boot, and Microservices</strong>,
+        integrate <strong>AWS/Kafka</strong>, and ship APIs with strong security and CI/CD.
+        <span id="typed"></span>
+      </p>
+      <div style="display:flex;gap:12px;margin-top:18px">
+        <a class="btn primary" href="#projects">View My Work</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Download Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 data-aos="fade-up">About Me</h2>
+      <p class="muted" data-aos="fade-up" data-aos-delay="80">
+        Senior Java/Spring developer with real-world experience at Pfizer, Truist, and Costco.
+        I design fault-tolerant microservices, secure APIs (OAuth2/JWT), and scalable AWS deployments.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 data-aos="fade-up">Technical Skills</h2>
+      <div class="grid skills">
+        <div class="card" data-aos="zoom-in">Java • Spring Boot • Spring Security • JPA/Hibernate</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="50">REST • Swagger/OpenAPI • Kafka/RabbitMQ</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">AWS (EC2, S3, RDS, Lambda)</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="150">MySQL • PostgreSQL • MongoDB • Redis</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">Docker • Kubernetes • Jenkins/GitHub Actions</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="250">ELK • Prometheus • Grafana • Splunk</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 data-aos="fade-up">Experience</h2>
+      <div class="xp">
+        <div class="xp-item" data-aos="fade-right">
+          <strong>Senior Java Developer — Pfizer</strong> <span class="muted">Feb 2024 – Present</span>
+          <div class="muted">Spring Boot microservices for drug supply chain; JWT/OAuth2 security; Kafka pipelines; AWS ECS Fargate; 85%+ test coverage.</div>
+        </div>
+        <div class="xp-item" data-aos="fade-right" data-aos-delay="80">
+          <strong>Java Backend Developer — Truist</strong> <span class="muted">Dec 2020 – Aug 2023</span>
+          <div class="muted">Loan systems (Spring Boot + MySQL), JPA, ActiveMQ, RBAC, Quartz scheduling, GitLab CI, dashboards.</div>
+        </div>
+        <div class="xp-item" data-aos="fade-right" data-aos-delay="140">
+          <strong>Java Developer — Costco</strong> <span class="muted">Jan 2019 – Dec 2020</span>
+          <div class="muted">Order management APIs, Oracle, Hibernate, Tomcat, responsive JSP/Bootstrap UI, notifications & invoicing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 data-aos="fade-up">Projects</h2>
+      <div class="grid">
+        <div class="card" data-aos="flip-up">
+          <strong>Secure API Platform</strong>
+          <div class="muted">Spring Boot + Spring Security + Swagger/OpenAPI with JWT/OAuth2; blue-green deploys on Kubernetes.</div>
+        </div>
+        <div class="card" data-aos="flip-up" data-aos-delay="80">
+          <strong>Event Streaming</strong>
+          <div class="muted">Kafka streams for real-time processing; Redis caching; ELK monitoring.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <section id="certs">
+    <div class="container">
+      <h2 data-aos="fade-up">Certifications</h2>
+      <ul class="muted">
+        <li>Aviatrix Certified Multi-Cloud Networking Associate</li>
+        <li>OCI Developer Certified Associate</li>
+        <li>Salesforce Certified System Administrator</li>
+        <li>Automation Anywhere RPA Professional</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 data-aos="fade-up">Let’s Connect</h2>
+      <p class="muted">Email: <a href="mailto:ganeshtirumalasetty2001@gmail.com">ganeshtirumalasetty2001@gmail.com</a> ·
+         LinkedIn: <a href="https://www.linkedin.com/in/tirumalasettysaiganesh" target="_blank">Profile</a>
+      </p>
+      <!-- Optional static form via Formspree -->
+      <!-- <form action="https://formspree.io/f/your-id" method="POST">
+        <input name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Say hello..." required></textarea>
+        <button class="btn primary" type="submit">Send</button>
+      </form> -->
+    </div>
+  </section>
+
+  <footer><div class="container muted">© <span id="yr"></span> Sai Ganesh • Built with love.</div></footer>
+
+  <!-- libs -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    new Typed('#typed', {strings:['','OAuth2/SSO','Kafka & RabbitMQ','Docker + Kubernetes','AWS ECS Fargate','Swagger/OpenAPI'],
+      typeSpeed:40, backSpeed:20, backDelay:1400, loop:true});
+    AOS.init({ once:true, duration:650, easing:'ease-out-cubic' });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
