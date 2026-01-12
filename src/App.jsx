@@ -103,14 +103,7 @@ export default function App() {
               target="_blank" rel="noreferrer"
             >
               LinkedIn
-            </a>
-            <a
-              href={LINKS.github}
-              className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm hover:bg-slate-50"
-              target="_blank" rel="noreferrer"
-            >
-              GitHub
-            </a>
+            
           </div>
         </div>
       </header>
