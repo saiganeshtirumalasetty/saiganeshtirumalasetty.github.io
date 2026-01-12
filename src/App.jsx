@@ -103,6 +103,7 @@ export default function App() {
               target="_blank" rel="noreferrer"
             >
               LinkedIn
+            </a>
             
           </div>
         </div>
@@ -206,13 +207,7 @@ export default function App() {
                 </ul>
 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href={p.repo}
-                    className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50"
-                    target="_blank" rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
+                  
                   <a
                     href={p.live}
                     className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
@@ -304,12 +299,7 @@ export default function App() {
                 Open Profile
               </a>
             </p>
-            <p className="mt-2 text-slate-700">
-              GitHub:{" "}
-              <a className="font-medium text-slate-900 underline" href={LINKS.github} target="_blank" rel="noreferrer">
-                View Repos
-              </a>
-            </p>
+            
           </div>
         </Section>
 
