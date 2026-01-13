@@ -208,13 +208,7 @@ export default function App() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   
-                  <a
-                    href={p.live}
-                    className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
-                    target="_blank" rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
+                 
                 </div>
               </div>
             ))}
