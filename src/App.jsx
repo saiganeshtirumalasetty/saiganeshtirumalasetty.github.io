@@ -4,7 +4,7 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/your-linkedin/",
   github: "https://github.com/your-github/",
   email: "mailto:saiganeshtirumalasetty@gmail.com",
-  resume: "C:\Users\saiti\Downloads\SaiGaneshAT.docx", // put your resume pdf path later (e.g., /resume.pdf)
+  resume: "C:\Users\saiti\Downloads\SaiGaneshAT.pdf", // put your resume pdf path later (e.g., /resume.pdf)
 };
 
 const PROJECTS = [
