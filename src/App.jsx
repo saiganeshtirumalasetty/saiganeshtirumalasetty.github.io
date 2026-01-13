@@ -4,7 +4,7 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/your-linkedin/",
   github: "https://github.com/your-github/",
   email: "mailto:saiganeshtirumalasetty@gmail.com",
-  resume: "#", // put your resume pdf path later (e.g., /resume.pdf)
+  resume: "C:\Users\saiti\Downloads\SaiGaneshAT.docx", // put your resume pdf path later (e.g., /resume.pdf)
 };
 
 const PROJECTS = [
@@ -145,10 +145,13 @@ export default function App() {
                 >
                   Download Resume
                 </a>
-                <a
-                  href={LINKS.email}
+                 <a
+                  href={LINKS.resume}
                   className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50"
-                >
+                  target="_blank"
+                  rel="noreferrer"
+                  download
+                  >
                   Email Me
                 </a>
               </div>
