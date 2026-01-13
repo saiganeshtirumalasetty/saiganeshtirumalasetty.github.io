@@ -4,7 +4,7 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/your-linkedin/",
   github: "https://github.com/your-github/",
   email: "mailto:saiganeshtirumalasetty@gmail.com",
-  resume: "C:\Users\saiti\Downloads\SaiGaneshAT.pdf", // put your resume pdf path later (e.g., /resume.pdf)
+  resume: "/SaiGaneshAT.pdf", // put your resume pdf path later (e.g., /resume.pdf)
 };
 
 const PROJECTS = [
@@ -132,30 +132,33 @@ export default function App() {
                 <Badge text="React" />
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+             <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#projects"
                   className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
                 >
                   View Projects
                 </a>
+
                 <a
-                  href={LINKS.resume}
-                  className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50"
-                >
-                  Download Resume
-                </a>
-                 <a
                   href={LINKS.resume}
                   className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50"
                   target="_blank"
                   rel="noreferrer"
                   download
-                  >
+                >
+                  Download Resume
+                </a>
+
+                <a
+                  href={LINKS.email}
+                  className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50"
+                >
                   Email Me
                 </a>
               </div>
             </div>
+
 
             {/* What I do */}
             <div className="mt-6 grid gap-4 md:grid-cols-3">
