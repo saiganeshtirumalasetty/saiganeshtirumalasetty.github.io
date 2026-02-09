@@ -4,7 +4,8 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/your-linkedin/",
   github: "https://github.com/your-github/",
   email: "mailto:saiganeshtirumalasetty@gmail.com",
-  resume: "/SaiGaneshAT.pdf", // put your resume pdf path later (e.g., /resume.pdf)
+  // ✅ Put your PDF in: public/SaiGanesh_Resume.pdf
+  resume: "/SGT.pdf",
 };
 
 const PROJECTS = [
@@ -50,11 +51,11 @@ const PROJECTS = [
 ];
 
 const TECH = {
-  "Backend": ["Java", "Spring Boot", "Spring Security", "Hibernate", "JPA", "Spring Batch"],
-  "Frontend": ["React", "JavaScript", "HTML", "CSS"],
+  Backend: ["Java", "Spring Boot", "Spring Security", "Hibernate", "JPA", "Spring Batch"],
+  Frontend: ["React", "JavaScript", "HTML", "CSS"],
   "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD (Jenkins, GitHub Actions)"],
-  "Messaging": ["Kafka", "RabbitMQ", "ActiveMQ"],
-  "Databases": ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "Redis"],
+  Messaging: ["Kafka", "RabbitMQ", "ActiveMQ"],
+  Databases: ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "Redis"],
 };
 
 function Badge({ text }) {
@@ -71,9 +72,7 @@ function Section({ id, title, subtitle, children }) {
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900">{title}</h2>
-          {subtitle ? (
-            <p className="mt-2 max-w-3xl text-slate-600">{subtitle}</p>
-          ) : null}
+          {subtitle ? <p className="mt-2 max-w-3xl text-slate-600">{subtitle}</p> : null}
         </div>
         {children}
       </div>
@@ -90,21 +89,31 @@ export default function App() {
           <a href="#top" className="font-semibold tracking-tight">
             Sai Ganesh
           </a>
+
           <nav className="hidden gap-6 text-sm text-slate-600 md:flex">
-            <a className="hover:text-slate-900" href="#projects">Projects</a>
-            <a className="hover:text-slate-900" href="#stack">Tech Stack</a>
-            <a className="hover:text-slate-900" href="#experience">Experience</a>
-            <a className="hover:text-slate-900" href="#contact">Contact</a>
+            <a className="hover:text-slate-900" href="#projects">
+              Projects
+            </a>
+            <a className="hover:text-slate-900" href="#stack">
+              Tech Stack
+            </a>
+            <a className="hover:text-slate-900" href="#experience">
+              Experience
+            </a>
+            <a className="hover:text-slate-900" href="#contact">
+              Contact
+            </a>
           </nav>
+
           <div className="flex items-center gap-2">
             <a
               href={LINKS.linkedin}
               className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm hover:bg-slate-50"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               LinkedIn
             </a>
-            
           </div>
         </div>
       </header>
@@ -114,12 +123,15 @@ export default function App() {
         <section className="py-14">
           <div className="mx-auto max-w-5xl px-4">
             <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-              <p className="text-sm font-medium text-slate-500">Senior Java & Full-Stack Developer</p>
+              {/* ✅ Updated to match latest resume */}
+              <p className="text-sm font-medium text-slate-500">Senior Java Developer</p>
+
               <h1 className="mt-2 text-4xl font-semibold tracking-tight text-slate-900">
-                Building scalable backend systems with strong full-stack delivery.
+                Building scalable, secure enterprise applications with Java and Spring Boot.
               </h1>
+
               <p className="mt-4 max-w-3xl text-slate-600">
-                6+ years of experience delivering enterprise applications using Java, Spring Boot,
+                5+ years of experience delivering enterprise applications using Java, Spring Boot,
                 microservices, AWS, messaging (Kafka), and React integrations.
               </p>
 
@@ -132,7 +144,7 @@ export default function App() {
                 <Badge text="React" />
               </div>
 
-             <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#projects"
                   className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
@@ -140,6 +152,7 @@ export default function App() {
                   View Projects
                 </a>
 
+                {/* ✅ Resume download works on GitHub Pages when file is in /public */}
                 <a
                   href={LINKS.resume}
                   className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50"
@@ -159,7 +172,6 @@ export default function App() {
               </div>
             </div>
 
-
             {/* What I do */}
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {[
@@ -172,8 +184,8 @@ export default function App() {
                   desc: "AWS, Docker, Kubernetes, CI/CD for reliable deployments.",
                 },
                 {
-                  title: "Frontend & Full-Stack",
-                  desc: "React UI integrations that connect cleanly to backend services.",
+                  title: "Frontend & Integration",
+                  desc: "React integrations that connect cleanly to backend services.",
                 },
               ].map((c) => (
                 <div
@@ -196,7 +208,10 @@ export default function App() {
         >
           <div className="grid gap-4 md:grid-cols-2">
             {PROJECTS.map((p) => (
-              <div key={p.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div
+                key={p.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
                 <h3 className="text-lg font-semibold">{p.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{p.impact}</p>
 
@@ -212,10 +227,7 @@ export default function App() {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex flex-wrap gap-3">
-                  
-                 
-                </div>
+                {/* Buttons removed as requested (no GitHub / no Live Demo) */}
               </div>
             ))}
           </div>
@@ -229,7 +241,10 @@ export default function App() {
         >
           <div className="grid gap-4 md:grid-cols-2">
             {Object.entries(TECH).map(([group, items]) => (
-              <div key={group} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div
+                key={group}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
                 <h3 className="font-semibold">{group}</h3>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {items.map((i) => (
@@ -268,7 +283,10 @@ export default function App() {
                 ],
               },
             ].map((e) => (
-              <div key={e.role} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div
+                key={e.role}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
                 <h3 className="font-semibold">{e.role}</h3>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700">
                   {e.points.map((pt) => (
@@ -281,11 +299,7 @@ export default function App() {
         </Section>
 
         {/* Contact */}
-        <Section
-          id="contact"
-          title="Contact"
-          subtitle="Make it effortless for recruiters to reach you."
-        >
+        <Section id="contact" title="Contact" subtitle="Make it effortless for recruiters to reach you.">
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-slate-700">
               Email:{" "}
@@ -295,17 +309,22 @@ export default function App() {
             </p>
             <p className="mt-2 text-slate-700">
               LinkedIn:{" "}
-              <a className="font-medium text-slate-900 underline" href={LINKS.linkedin} target="_blank" rel="noreferrer">
+              <a
+                className="font-medium text-slate-900 underline"
+                href={LINKS.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Open Profile
               </a>
             </p>
-            
           </div>
         </Section>
 
         <footer className="border-t border-slate-200 bg-white py-8">
+          {/* ✅ Updated footer */}
           <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500">
-            Sai Ganesh • Senior Java & Full-Stack Developer • Open to opportunities
+            Sai Ganesh • Senior Java Developer • Open to opportunities
           </div>
         </footer>
       </main>
